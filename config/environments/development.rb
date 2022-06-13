@@ -68,8 +68,13 @@ Rails.application.configure do
     :domain => 'heroku.com',
     :enable_starttls_auto => true
   }
-  
+
   config.action_mailer.delivery_method = :test
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+
+  config.stripe.secret_key = Rails.application.credentials.stripe[:development][:secret_key]
+  config.stripe.publishable_key = Rails.application.credentials.stripe[:development][:publishable_key]
+  
 
 end

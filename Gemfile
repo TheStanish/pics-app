@@ -5,6 +5,7 @@ ruby '2.6.10'
 
 # stripe payment
 gem 'stripe'
+gem 'stripe-rails'
 # tabular tables in rails console
 gem 'hirb'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

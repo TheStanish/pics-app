@@ -104,4 +104,6 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => 'photo-app-ts.herokuapp.com', :protocol => 'https' }
 
+  config.stripe.secret_key = Rails.application.credentials.stripe[:production][:secret_key]
+  config.stripe.publishable_key = Rails.application.credentials.stripe[:production][:publishable_key]
 end
